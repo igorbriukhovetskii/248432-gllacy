@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+  <meta charset="utf-8">
+  <title>Глейси: каталог мороженого</title>
+</head>
+<body>
+<header class="main-header  container">
+  <div class="main-header__left">
+    <a class="main-logo" href="index.html">
+      <img src="http://lorempixel.com/154/64" alt="Логотип магазина Глейси" width="154" height="64">
+    </a>
+    <!--Главное меню сайта-->
+    <nav class="main-nav">
+      <ul class="main-nav__items">
+        <li class="main-nav__item">
+          <a class="main-nav__link  main-nav__link_active" href="catalog.html">Каталог</a>
+          <!--Всплывающее меню каталога-->
+          <div class="hover  main-nav__list-links">
+            <span class="main-nav__list-heading">Новинки</span>
+            <ul>
+              <li class="main-nav__list-item"><a class="main-nav__list-link" href="catalog.html">Сливочное</a></li>
+              <li class="main-nav__list-item"><a class="main-nav__list-link" href="#">Щербеты</a></li>
+              <li class="main-nav__list-item"><a class="main-nav__list-link" href="#">Фруктовый лед</a></li>
+              <li class="main-nav__list-item"><a class="main-nav__list-link" href="#">Мелорин</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Доставка и оплата</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">О Компании</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="main-header__right">
+    <!--Пользовательский блок управления-->
+    <div class="user-block">
+      <div class="user-block__search">
+        <!--Всплывающее меню с формой поиска-->
+        <form class="hover  site-search" action="#" method="get">
+          <div class="site-search__field-group">
+            <label class="field-label  site-search__field-label" for="search">Что ищем?</label>
+            <input class="input-field  site-search__input-field" id="search" type="text" placeholder="Что ищем?">
+          </div>
+        </form>
+      </div>
+      <!--Блок авторизации пользователя-->
+      <div class="user-block__authorization">
+        <!--Всплывающая форма авторизации пользователя-->
+        <form class="hover  authorization-form" action="#" method="post">
+          <div class="authorization-form__field-group">
+            <label class="field-label  authorization-form__field-label" for="login">Электронная почта</label>
+            <input class="input-field  authorization-form__input-field" id="login" type="email" placeholder="Электронная почта">
+          </div>
+          <div class="authorization-form__field-group">
+            <label class="field-label  authorization-form__field-label" for="password">Пароль</label>
+            <input class="input-field  authorization-form__input-field" id="password" type="password" placeholder="Пароль">
+          </div>
+          <div class="authorization-form__bottom">
+            <button class="btn authorization-form-btn" type="submit">Войти</button>
+            <div class="authorization-form__links">
+              <a class="authorization-form__link">Забыли пароль?</a>
+              <a class="authorization-form__link">Новая регистрация</a>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!--Корзина-->
+      <div class="cart">
+        <a class="cart__link" href="#">2 товара</a>
+        <!--Всплывающее окно редактирования заказа-->
+        <div class="hover  cart__hover">
+          <!--Список товаров в корзине-->
+          <table class="cart__items">
+            <tr class="cart__item">
+              <td class="cart__item-delete"></td>
+              <td class="cart__item-image"><img src="http://lorempixel.com/33/33" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
+              <td class="cart__item-name">Пломбир с апельсиновым джемом</td>
+              <td class="cart__item-weight">1,5 кг х <span class="item__price">200 руб.</span></td>
+              <td class="cart__item-total">300 руб.</td>
+            </tr>
+            <tr class="cart__item">
+              <td class="cart__item-delete"></td>
+              <td class="cart__item-image"><img src="http://lorempixel.com/33/33" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
+              <td class="cart__item-name">Клубничный пломбир с присыпкой из белого шоколада</td>
+              <td class="cart__item-weight">1,5 кг х <span class="item__price">300 руб.</span></td>
+              <td class="cart__item-total">450 руб.</td>
+            </tr>
+          </table>
+          <div class="cart__order-price">
+            Итого: 750 руб.
+          </div>
+          <a class="btn  cart__btn"></a></div>
+      </div>
+    </div>
+    <!--Часы работы и номера телефонов-->
+    <div class="main-header__info">
+      <span class="main-header__work-time">С 10 до 20, ежедневно</span>
+      <span class="main-header__phone-number">8 812 450-25-25</span>
+    </div>
+  </div>
+</header>
+<main class="page-content  container">
+  <!--Вспомогательная навигация-->
+  <nav class="breadcrumbs">
+    <ul class="breadcrumbs__links">
+      <li class="breadcrumbs__link-wrapper">
+        <a class="breadcrumbs__link" href="index.html">Главная</a>
+      </li>
+      <li class="breadcrumbs__link-wrapper">
+        <a class="breadcrumbs__link">Каталог</a>
+      </li>
+      <li class="breadcrumbs__link-wrapper">
+        <a class="breadcrumbs__link">Сливочное</a>
+      </li>
+    </ul>
+  </nav>
+  <h1 class="catalog-main-header">Сливочное мороженое</h1>
+  <!--Блок фильтров каталога-->
+  <section class="product-filter">
+    <form class="product-filter__form" action="#" method="get">
+      <div class="product-filter__row">
+        <div class="product-filter__group">
+          <!--Выпадающий список выбора критерия сортировки-->
+          <div class="product-filter__select-sort-method">
+            <label class="product-filter__filter-label" for="sort">Сортировка:</label>
+            <select class="product-filter__select" id="sort" name="sort-select">
+              <option value="by-popularity" selected>по популярности</option>
+              <option value="cheap-first">сначала недорогие</option>
+              <option value="expensive-first">сначала дорогие</option>
+              <option value="by-fat-saturation">по жирности</option>
+            </select>
+          </div>
+        </div>
+        <div class="product-filter__group">
+          <!--Слайдер выбора ценового диапазона-->
+          <span class="product-filter__filter-label">Цена: 100 руб. – 500 руб.</span>
+          <div class="range-slider  product-filter__range-slider">
+            <div class="range-slider__track">
+              <div class="range-slider__low"></div>
+              <div class="range-slider__selection"></div>
+              <div class="range-slider__high"></div>
+              <div class="range-slider__handle  range-slider__handle_min"></div>
+              <div class="range-slider__handle  range-slider__handle_max"></div>
+            </div>
+          </div>
+        </div>
+        <div class="product-filter__group">
+          <!--Фильтр мороженого по жирности(группа радиобаттонов)-->
+          <span class="product-filter__filter-label">Жирность:</span>
+          <div class="product-filter__sort-by-fat">
+            <input class="product-filter__radio" type="radio" id="0_fat" name="fat-saturation" value="0" checked>
+            <label class="product-filter__radio-label" for="0_fat">0%</label>
+            <input class="product-filter__radio" type="radio" id="0-10_fat" name="fat-saturation" value="0-10">
+            <label class="product-filter__radio-label" for="0-10_fat">до 10%</label>
+            <input class="product-filter__radio" type="radio" id="0-30_fat" name="fat-saturation" value="0-30">
+            <label class="product-filter__radio-label" for="0-30_fat">до 30%</label>
+            <input class="product-filter__radio" type="radio" id="30+_fat" name="fat-saturation" value="30+">
+            <label class="product-filter__radio-label" for="30+_fat">выше 30%</label>
+          </div>
+        </div>
+      </div>
+      <div class="product-filter__row">
+        <div class="product-filter__group">
+          <!--Фильт мороженого по типу наполнителя (группа чекбоксов)-->
+          <span class="product-filter__filter-label"></span>
+          <div class="product-filter__sort-by-filler">
+            <input class="product-filter__checkbox" type="checkbox" id="chocolate" name="filler" value="chocolate-filler" checked>
+            <label class="product-filter__checkbox-label" for="chocolate">шоколадные</label>
+            <input class="product-filter__checkbox" type="checkbox" id="sugar" name="filler" value="sugar-covered" checked>
+            <label class="product-filter__checkbox-label" for="sugar">сахарные присыпки</label>
+            <input class="product-filter__checkbox" type="checkbox" id="fruits" name="filler" value="fruit-filler">
+            <label class="product-filter__checkbox-label" for="fruits">фрукты</label>
+            <input class="product-filter__checkbox" type="checkbox" id="syrups" name="filler" value="syrup-filler">
+            <label class="product-filter__checkbox-label" for="syrups">сиропы</label>
+            <input class="product-filter__checkbox" type="checkbox" id="jam" name="filler" value="jam-filler">
+            <label class="product-filter__checkbox-label" for="jam">сиропы</label>
+          </div>
+        </div>
+      </div>
+      <button class="btn  product-filter__btn" type="submit">Применить</button>
+    </form>
+  </section>
+  <!--Раздел с карточками товаров-->
+  <section class="catalog-showcase">
+    <div class="catalog-showcase__row">
+      <!--Карточка товара-->
+      <article class="product">
+        <div class="product__image-wrapper">
+          <img class="product__item-image" src="http://lorempixel.com/267/267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
+          <span class="product__item-price">310<img src="http://lorempixel.com/26/31" alt="Знак рубля" width="26" height="31"><span>/кг</span></span>
+        </div>
+        <a class="product__catalog-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+        <div class="product__hover">
+          <a class="btn  product__btn" href="#">Быстрый просмотр</a>
+        </div>
+      </article>
+      <!--Карточка товара-->
+      <article class="product">
+        <div class="product__image-wrapper">
+          <img class="product__item-image" src="http://lorempixel.com/267/267" alt="Сливочное мороженое с апельсиновым джемом" width="267" height="267">
+          <span class="product__item-price">380<img src="http://lorempixel.com/26/31" alt="Знак рубля" width="26" height="31"><span>/кг</span></span>
+        </div>
+        <a class="product__catalog-link" href="#">Сливочно-кофейное с кусочками шоколада</a>
+        <div class="product__hover">
+          <a class="btn  product__btn" href="#">Быстрый просмотр</a>
+        </div>
+      </article>
+      <!--Карточка товара-->
+      <article class="product">
+        <div class="product__image-wrapper">
+          <img class="product__item-image" src="http://lorempixel.com/267/267" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
+          <span class="product__item-price">355<img src="http://lorempixel.com/26/31" alt="Знак рубля" width="26" height="31"><span>/кг</span></span>
+        </div>
+        <a class="product__catalog-link" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+        <div class="product__hover">
+          <a class="btn  product__btn" href="#">Быстрый просмотр</a>
+        </div>
+      </article>
+      <!--Карточка товара-->
+      <article class="product">
+        <div class="product__image-wrapper">
+          <img class="product__item-image" src="http://lorempixel.com/267/267" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
+          <span class="product__item-price">415<img src="http://lorempixel.com/26/31" alt="Знак рубля" width="26" height="31"><span>/кг</span></span>
+        </div>
+        <a class="product__catalog-link" href="#">Сливочное крем-брюле с карамельной подливкой</a>
+        <div class="product__hover">
+          <a class="btn  product__btn" href="#">Быстрый просмотр</a>
+        </div>
+      </article>
+    </div>
+    <div class="catalog-showcase__row">
+      <!--Карточка товара-->
+      <article class="product">
+        <div class="product__image-wrapper">
+          <img class="product__item-image" src="http://lorempixel.com/267/267" alt="Сливочное с брусничным джемом" width="267" height="267">
+          <span class="product__item-price">325<img src="http://lorempixel.com/26/31" alt="Знак рубля" width="26" height="31"><span>/кг</span></span>
+        </div>
+        <a class="product__catalog-link" href="#">Сливочное с брусничным джемом</a>
+        <div class="product__hover">
+          <a class="btn  product__btn" href="#">Быстрый просмотр</a>
+        </div>
+      </article>
+      <!--Карточка товара-->
+      <article class="product">
+        <div class="product__image-wrapper">
+          <img class="product__item-image" src="http://lorempixel.com/267/267" alt="Сливочно-черничное с цельными ягодами черники" width="267" height="267">
+          <span class="product__item-price">410<img src="http://lorempixel.com/26/31" alt="Знак рубля" width="26" height="31"><span>/кг</span></span>
+        </div>
+        <a class="product__catalog-link" href="#">Сливочно-черничное с цельными ягодами черники</a>
+        <div class="product__hover">
+          <a class="btn  product__btn" href="#">Быстрый просмотр</a>
+        </div>
+      </article>
+      <!--Карточка товара-->
+      <article class="product">
+        <div class="product__image-wrapper">
+          <img class="product__item-image" src="http://lorempixel.com/267/267" alt="Сливочно-лимонное с карамельной присыпкой" width="267" height="267">
+          <span class="product__item-price">375<img src="http://lorempixel.com/26/31" alt="Знак рубля" width="26" height="31"><span>/кг</span></span>
+        </div>
+        <a class="product__catalog-link" href="#">Сливочно-лимонное с карамельной присыпкой</a>
+        <div class="product__hover">
+          <a class="btn  product__btn" href="#">Быстрый просмотр</a>
+        </div>
+      </article>
+      <!--Карточка товара-->
+      <article class="product">
+        <div class="product__image-wrapper">
+          <img class="product__item-image" src="http://lorempixel.com/267/267" alt="Сливочное с шоколадной стружкой" width="267" height="267">
+          <span class="product__item-price">320<img src="http://lorempixel.com/26/31" alt="Знак рубля" width="26" height="31"><span>/кг</span></span>
+        </div>
+        <a class="product__catalog-link" href="#">Сливочное с шоколадной стружкой</a>
+        <div class="product__hover">
+          <a class="btn  product__btn" href="#">Быстрый просмотр</a>
+        </div>
+      </article>
+    </div>
+    <div class="catalog-showcase__row">
+      <!--Карточка товара-->
+      <article class="product">
+        <div class="product__image-wrapper">
+          <img class="product__item-image" src="http://lorempixel.com/267/267" alt="Сливочно-ванильное с кусочками шоколада" width="267" height="267">
+          <span class="product__item-price">440<img src="http://lorempixel.com/26/31" alt="Знак рубля" width="26" height="31"><span>/кг</span></span>
+        </div>
+        <a class="product__catalog-link" href="#">Сливочно-ванильное с кусочками шоколада</a>
+        <div class="product__hover">
+          <a class="btn  product__btn" href="#">Быстрый просмотр</a>
+        </div>
+      </article>
+      <!--Карточка товара-->
+      <article class="product">
+        <div class="product__image-wrapper">
+          <img class="product__item-image" src="http://lorempixel.com/267/267" alt="Сливочноe с ментоловым сиропом" width="267" height="267">
+          <span class="product__item-price">435<img src="http://lorempixel.com/26/31" alt="Знак рубля" width="26" height="31"><span>/кг</span></span>
+        </div>
+        <a class="product__catalog-link" href="#">Сливочноe с ментоловым сиропом</a>
+        <div class="product__hover">
+          <a class="btn  product__btn" href="#">Быстрый просмотр</a>
+        </div>
+      </article>
+      <!--Карточка товара-->
+      <article class="product">
+        <div class="product__image-wrapper">
+          <img class="product__item-image" src="http://lorempixel.com/267/267" alt="Сливочное с кусочками черного шоколада" width="267" height="267">
+          <span class="product__item-price">355<img src="http://lorempixel.com/26/31" alt="Знак рубля" width="26" height="31"><span>/кг</span></span>
+        </div>
+        <a class="product__catalog-link" href="#">Сливочное с кусочками черного шоколада</a>
+        <div class="product__hover">
+          <a class="btn  product__btn" href="#">Быстрый просмотр</a>
+        </div>
+      </article>
+      <!--Карточка товара-->
+      <article class="product">
+        <div class="product__image-wrapper">
+          <img class="product__item-image" src="http://lorempixel.com/267/267" alt="Сливочное с мятным сиропом" width="267" height="267">
+          <span class="product__item-price">440<img src="http://lorempixel.com/26/31" alt="Знак рубля" width="26" height="31"><span>/кг</span></span>
+        </div>
+        <a class="product__catalog-link" href="#">Сливочное с мятным сиропом</a>
+        <div class="product__hover">
+          <a class="btn  product__btn" href="#">Быстрый просмотр</a>
+        </div>
+      </article>
+    </div>
+    <!--Пагинатор каталога-->
+    <div class="pagination  catalog__pagination">
+      <div class="pagination__inner">
+        <ul class="pagination__list">
+          <li class="pagination__page-item  pagination__page-item_previous">
+            <a class="pagination__link  pagination__link_disabled">Предыдущая страница</a>
+          </li>
+          <li class="pagination__page-item">
+            <a class="pagination__link  pagination__link_active">1</a>
+          </li>
+          <li class="pagination__page-item">
+            <a class="pagination__link" href="#">2</a>
+          </li>
+          <li class="pagination__page-item">
+            <a class="pagination__link" href="#">3</a>
+          </li>
+          <li class="pagination__page-item">
+            <a class="pagination__link" href="#">4</a>
+          </li>
+          <li class="pagination__page-item">
+            <a class="pagination__link" href="#">5</a>
+          </li>
+          <li class="pagination__page-item  pagination__page-item_next">
+            <a class="pagination__link" href="#">Следующая страница</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="main-footer  container">
+  <div class="social">
+    <div class="social__inner">
+      <a href="https://twitter.com">Мы В Twitter</a>
+      <a href="https://instagram.com">Мы в Instagram</a>
+      <a href="https://facebook.com">Мы в Facebook</a>
+      <a href="https://vk.com">Мы В Контакте</a>
+    </div>
+  </div>
+  <div class="main-footer__info-links">
+    <div class="main-footer__info-links-group">
+      <a class="main-footer__info-link  main-footer__info-link_favorite" href="#">Для поставщиков</a>
+      <a class="main-footer__info-link" href="#">О производстве</a>
+    </div>
+    <div class="main-footer__info-links-group">
+      <a class="main-footer__info-link" href="#">Наши документы</a>
+      <a class="main-footer__info-link" href="#">Экологические стандарты</a>
+    </div>
+  </div>
+  <div class="main-footer__copyright">
+    <img src="http://lorempixel.com/108/39" alt="Логотип HTML Академии" width="108" height="39">
+    <p>
+      Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>© 2017
+    </p>
+  </div>
+</footer>
+</body>
+</html>
