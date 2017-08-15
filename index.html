@@ -6,12 +6,12 @@
   </head>
   <body>
   <!--Скрытые контролы слайдера-->
-  <input class="promo-slider__radio-btn" type="radio" id="slide-1" name="promo" checked>
-  <input class="promo-slider__radio-btn" type="radio" id="slide-2" name="promo">
-  <input class="promo-slider__radio-btn" type="radio" id="slide-3" name="promo">
+  <input class="slider-control" type="radio" id="slide-1" name="promo" checked>
+  <input class="slider-control" type="radio" id="slide-2" name="promo">
+  <input class="slider-control" type="radio" id="slide-3" name="promo">
   <div class="page-wrapper">
-    <header class="main-header">
-      <div class="row">
+    <header class="main-header  container">
+      <div class="main-header__left">
         <div class="main-logo">
           <img src="http://lorempixel.com/154/64" alt="Логотип магазина Глейси" width="154" height="64">
         </div>
@@ -39,6 +39,8 @@
             </li>
           </ul>
         </nav>
+      </div>
+      <div class="main-header__right">
         <!--Пользовательский блок управления-->
         <div class="user-block">
           <div class="user-block__search">
@@ -63,7 +65,7 @@
                 <input class="input-field  authorization-form__input-field" id="password" type="password" placeholder="Пароль">
               </div>
               <div class="authorization-form__bottom">
-                <button class="btn authorization-form-btn" type="submit">Войти</button>
+                <button class="btn authorization-form__btn" type="submit">Войти</button>
                 <div class="authorization-form__links">
                   <a class="authorization-form__link">Забыли пароль?</a>
                   <a class="authorization-form__link">Новая регистрация</a>
@@ -72,12 +74,10 @@
             </form>
           </div>
           <!--Корзина-->
-          <div class="cart  cart_empty">
+          <div class="cart  cart--empty">
             <a class="cart__link" href="#">Пусто</a>
           </div>
         </div>
-      </div>
-      <div class="row">
         <!--Часы работы и номера телефонов-->
         <div class="main-header__info">
           <span class="main-header__work-time">С 10 до 20, ежедневно</span>
@@ -85,9 +85,9 @@
         </div>
       </div>
     </header>
-    <main class="page-content">
+    <main class="page-content  container">
       <!--Блок промо-слайдера-->
-      <section class="promo-slider  row">
+      <section class="promo-slider">
         <div class="promo-slider__controls">
           <label class="promo-slider__control" for="slide-1"></label>
           <label class="promo-slider__control" for="slide-2"></label>
@@ -109,15 +109,15 @@
         </div>
       </section>
       <!--Раздел специальных предложений-->
-      <section class="special-offers  row">
-        <div class="special-offers__offer  col  col_size_half">
+      <section class="special-offers">
+        <div class="special-offers__offer">
           <h2 class="special-offers__heading">Малинка даром!</h2>
           <p class="special-offers__text">
             При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
           </p>
           <a class="btn  special-offers__btn">Хочу варенье!</a>
         </div>
-        <div class="special-offers__offer  col  col_size_half">
+        <div class="special-offers__offer">
           <h2 class="special-offers__heading">Шоколадки даром!</h2>
           <p class="special-offers__text">
             При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
@@ -127,50 +127,55 @@
       </section>
       <!--Раздел с карточками товаров-->
       <section class="main-page-showcase">
-        <div class="row">
-          <!--Карточка товара-->
-          <article class="product  product_featured  col  col_width_quarter">
-            <div class="product__image-wrapper">
-              <img class="product__item-image" src="http://lorempixel.com/267/267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
-              <span class="product__item-price">310<img src="http://lorempixel.com/26/31" alt="Знак рубля" width="26" height="31"><span>/кг</span></span>
-            </div>
-            <a class="product__catalog-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+        <!--Карточка товара-->
+        <article class="product  product--featured">
+          <div class="product__image-wrapper">
+            <img class="product__item-image" src="http://lorempixel.com/267/267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
+            <span class="product__item-price">310<img src="http://lorempixel.com/26/31" alt="Знак рубля" width="26" height="31"><span>/кг</span></span>
+          </div>
+          <a class="product__catalog-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+          <div class="product__hover">
             <a class="btn  product__btn" href="#">Быстрый просмотр</a>
-          </article>
-          <!--Карточка товара-->
-          <article class="product  product_featured  col  col_width_quarter">
-            <div class="product__image-wrapper">
-              <img class="product__item-image" src="http://lorempixel.com/267/267" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
-              <span class="product__item-price">380<img src="http://lorempixel.com/26/31" alt="Знак рубля" width="26" height="31"><span>/кг</span></span>
-            </div>
-            <a class="product__catalog-link" href="#">Сливочно-кофейное с кусочками шоколада</a>
+          </div>
+        </article>
+        <!--Карточка товара-->
+        <article class="product  product--featured">
+          <div class="product__image-wrapper">
+            <img class="product__item-image" src="http://lorempixel.com/267/267" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
+            <span class="product__item-price">380<img src="http://lorempixel.com/26/31" alt="Знак рубля" width="26" height="31"><span>/кг</span></span>
+          </div>
+          <a class="product__catalog-link" href="#">Сливочно-кофейное с кусочками шоколада</a>
+          <div class="product__hover">
             <a class="btn  product__btn" href="#">Быстрый просмотр</a>
-          </article>
-          <!--Карточка товара-->
-          <article class="product  product_featured  col  col_width_quarter">
-            <div class="product__image-wrapper">
-              <img class="product__item-image" src="http://lorempixel.com/267/267" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
-              <span class="product__item-price">355<img src="http://lorempixel.com/26/31" alt="Знак рубля" width="26" height="31"><span>/кг</span></span>
-            </div>
-            <a class="product__catalog-link" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+          </div>
+        </article>
+        <!--Карточка товара-->
+        <article class="product  product--featured">
+          <div class="product__image-wrapper">
+            <img class="product__item-image" src="http://lorempixel.com/267/267" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
+            <span class="product__item-price">355<img src="http://lorempixel.com/26/31" alt="Знак рубля" width="26" height="31"><span>/кг</span></span>
+          </div>
+          <a class="product__catalog-link" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+          <div class="product__hover">
             <a class="btn  product__btn" href="#">Быстрый просмотр</a>
-          </article>
-          <!--Карточка товара-->
-          <article class="product  product_featured  col  col_width_quarter">
-            <div class="product__image-wrapper">
-              <img class="product__item-image" src="http://lorempixel.com/267/267" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
-              <span class="product__item-price">415<img src="http://lorempixel.com/26/31" alt="Знак рубля" width="26" height="31"><span>/кг</span></span>
-            </div>
-            <a class="product__catalog-link" href="#">Сливочное крем-брюле с карамельной подливкой</a>
+          </div>
+        </article>
+        <!--Карточка товара-->
+        <article class="product  product--featured">
+          <div class="product__image-wrapper">
+            <img class="product__item-image" src="http://lorempixel.com/267/267" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
+            <span class="product__item-price">415<img src="http://lorempixel.com/26/31" alt="Знак рубля" width="26" height="31"><span>/кг</span></span>
+          </div>
+          <a class="product__catalog-link" href="#">Сливочное крем-брюле с карамельной подливкой</a>
+          <div class="product__hover">
             <a class="btn  product__btn" href="#">Быстрый просмотр</a>
-          </article>
-        </div>
+          </div>
+        </article>
       </section>
       <!--Описание магазина-->
       <section class="shop-description">
         <h1 class="shop-description__heading">Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h1>
-        <div class="row">
-          <div class="col  col_width_half">
+          <div class="shop-description__left-column">
             <p class="shop-description__item">
               Все наше мороженое изготавливается на собственном производстве,
               с использованием современного оборудования и проверенных временем технологий.
@@ -180,7 +185,7 @@
               Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
             </p>
           </div>
-          <div class="col  col_width_half">
+          <div class="shop-description__right-column">
             <p class="shop-description__item">
               Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний,
               с которыми нас связывает долговременное сотрудничество.
@@ -190,16 +195,15 @@
               который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
             </p>
           </div>
-        </div>
       </section>
-      <div class="row">
+      <div class="page-content__row">
         <!--Статья из блога-->
-        <article class="post  col  col_width_half">
+        <article class="post">
           <h3 class="post__heading">Новое в нашем блоге</h3>
           <a class="post__link" href="#">10 способов сервировки фруктовых щербетов к столу</a>
         </article>
         <!--Подписка на рассылку-->
-        <section class="subscription  col  col_width_half">
+        <section class="subscription">
           <p class="subscription__offer">
             Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит.
             Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
@@ -210,33 +214,35 @@
             <a class="btn  subscription__btn">Отправить</a>
           </div>
         </section>
-        <!--Блок карты-->
-        <div class="map">
-          <!--Адрес и контактный телефон-->
-          <section class="contacts">
-            <div class="contacts__address-block">
-              <p class="contacts__description">
-                Адрес главного офиса и офлайн магазина:
-              </p>
-              <p class="contacts__address">
-                ул. Большая Конюшенная 19/8, Санкт-Петербург
-              </p>
-            </div>
-            <div class="contacts__phone-block">
-              <p class="contacts__description">
-                Для заказов по телефону:
-              </p>
-              <p class="contacts__phone">
-                8 812 450-25-25
-                <span class="contacts__work-time">(с 10 до 20 ежедневно)</span>
-              </p>
-            </div>
-            <a class="btn  contacts__btn">Форма обратной связи</a>
-          </section>
-        </div>
       </div>
     </main>
-    <footer class="main-footer  row">
+    <!--Блок карты-->
+    <section class="map">
+      <div class="map__inner">
+        <!--Адрес и контактный телефон-->
+        <div class="contacts">
+          <div class="contacts__address-block">
+            <p class="contacts__description">
+              Адрес главного офиса и офлайн магазина:
+            </p>
+            <p class="contacts__address">
+              ул. Большая Конюшенная 19/8, Санкт-Петербург
+            </p>
+          </div>
+          <div class="contacts__phone-block">
+            <p class="contacts__description">
+              Для заказов по телефону:
+            </p>
+            <p class="contacts__phone">
+              8 812 450-25-25
+              <span class="contacts__work-time">(с 10 до 20 ежедневно)</span>
+            </p>
+          </div>
+          <a class="btn  contacts__btn">Форма обратной связи</a>
+        </div>
+      </div>
+    </section>
+    <footer class="main-footer  container">
       <div class="social">
         <div class="social__inner">
           <a href="https://twitter.com">Мы В Twitter</a>
@@ -247,7 +253,7 @@
       </div>
       <div class="main-footer__info-links">
         <div class="main-footer__info-links-group">
-          <a class="main-footer__info-link  main-footer__info-link_favorite" href="#">Для поставщиков</a>
+          <a class="main-footer__info-link  main-footer__info-link--favorite" href="#">Для поставщиков</a>
           <a class="main-footer__info-link" href="#">О производстве</a>
         </div>
         <div class="main-footer__info-links-group">
