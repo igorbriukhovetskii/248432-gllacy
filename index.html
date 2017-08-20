@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Глейси: магазин-мороженого</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
   <!--Скрытые контролы слайдера-->
@@ -13,7 +15,7 @@
     <header class="main-header  container">
       <div class="main-header__left">
         <div class="main-logo">
-          <img src="http://lorempixel.com/154/64" alt="Логотип магазина Глейси" width="154" height="64">
+          <img src="img/logo.svg" alt="Логотип магазина Глейси" width="154" height="64">
         </div>
         <!--Главное меню сайта-->
         <nav class="main-nav">
@@ -44,6 +46,9 @@
         <!--Пользовательский блок управления-->
         <div class="user-block">
           <div class="user-block__search">
+            <svg width="17" height="17" class="icon  icon--loupe">
+              <use xlink:href="#loupe"></use>
+            </svg>
             <!--Всплывающее меню с формой поиска-->
             <form class="hover  site-search" action="#" method="get">
               <div class="site-search__field-group">
@@ -75,6 +80,9 @@
           </div>
           <!--Корзина-->
           <div class="cart  cart--empty">
+            <svg class="icon  icon--cart" width="21" height="20">
+              <use xlink:href="#basket"></use>
+            </svg>
             <a class="cart__link" href="#">Пусто</a>
           </div>
         </div>
@@ -127,11 +135,17 @@
       </section>
       <!--Раздел с карточками товаров-->
       <section class="main-page-showcase">
+        <!--Векторное изображение знака рубля для использования в карточках товаров-->
+        <svg xmlns="http://www.w3.org/2000/svg" display="none">
+          <symbol viewBox="0 0 31 36" id="ruble" xmlns="http://www.w3.org/2000/svg">
+            <path fill="currentColor" d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/>
+          </symbol>
+        </svg>
         <!--Карточка товара-->
         <article class="product  product--featured">
           <div class="product__image-wrapper">
-            <img class="product__item-image" src="http://lorempixel.com/267/267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
-            <span class="product__item-price">310<img src="http://lorempixel.com/26/31" alt="Знак рубля" width="26" height="31"><span>/кг</span></span>
+            <img class="product__item-image" src="img/content/ice-cream-1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
+            <span class="product__item-price">310<svg width="26" height="31"><use xlink:href="#ruble"></use></svg><span>/кг</span></span>
           </div>
           <a class="product__catalog-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
           <div class="product__hover">
@@ -141,8 +155,8 @@
         <!--Карточка товара-->
         <article class="product  product--featured">
           <div class="product__image-wrapper">
-            <img class="product__item-image" src="http://lorempixel.com/267/267" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
-            <span class="product__item-price">380<img src="http://lorempixel.com/26/31" alt="Знак рубля" width="26" height="31"><span>/кг</span></span>
+            <img class="product__item-image" src="img/content/ice-cream-2.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
+            <span class="product__item-price">380<svg width="26" height="31"><use xlink:href="#ruble"></use></svg><span>/кг</span></span>
           </div>
           <a class="product__catalog-link" href="#">Сливочно-кофейное с кусочками шоколада</a>
           <div class="product__hover">
@@ -152,8 +166,8 @@
         <!--Карточка товара-->
         <article class="product  product--featured">
           <div class="product__image-wrapper">
-            <img class="product__item-image" src="http://lorempixel.com/267/267" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
-            <span class="product__item-price">355<img src="http://lorempixel.com/26/31" alt="Знак рубля" width="26" height="31"><span>/кг</span></span>
+            <img class="product__item-image" src="img/content/ice-cream-3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
+            <span class="product__item-price">355<svg width="26" height="31"><use xlink:href="#ruble"></use></svg><span>/кг</span></span>
           </div>
           <a class="product__catalog-link" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
           <div class="product__hover">
@@ -163,8 +177,8 @@
         <!--Карточка товара-->
         <article class="product  product--featured">
           <div class="product__image-wrapper">
-            <img class="product__item-image" src="http://lorempixel.com/267/267" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
-            <span class="product__item-price">415<img src="http://lorempixel.com/26/31" alt="Знак рубля" width="26" height="31"><span>/кг</span></span>
+            <img class="product__item-image" src="img/content/ice-cream-4.jpg" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
+            <span class="product__item-price">415<svg width="26" height="31"><use xlink:href="#ruble"></use></svg><span>/кг</span></span>
           </div>
           <a class="product__catalog-link" href="#">Сливочное крем-брюле с карамельной подливкой</a>
           <div class="product__hover">
@@ -262,7 +276,7 @@
         </div>
       </div>
       <div class="main-footer__copyright">
-        <img src="http://lorempixel.com/108/39" alt="Логотип HTML Академии" width="108" height="39">
+        <img src="img/logo-htmlacademy.svg" alt="Логотип HTML Академии" width="108" height="39">
         <p>
           Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>© 2017
         </p>

@@ -1,0 +1,35 @@
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.375;
+  color: #323232;
+}
+
+.special-offers__heading {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 1.171;
+  color: #ffffff;
+}
+
+.post__heading {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.375;
+  color: #5a5a5a;
+}
+
+.page-wrapper {
+  background-color: #90a69a;
+}
+
+.product__item-image {
+  border-radius: 50%;
+}
+
+.cart__item-image {
+  border-radius: 50%;
+}
