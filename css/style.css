@@ -33,3 +33,31 @@ body {
 .cart__item-image {
   border-radius: 50%;
 }
+
+/*Правило для сокрытия элементов без потери доступности*/
+.visually-hidden {
+  border: 0; clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/*Временные стили.*/
+.promo-slider__control {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #face80;
+}
+
+.slider-control[id="slide-1"]:checked ~ .page-wrapper .promo-slider__control[for="slide-1"],
+.slider-control[id="slide-2"]:checked ~ .page-wrapper .promo-slider__control[for="slide-2"],
+.slider-control[id="slide-3"]:checked ~ .page-wrapper .promo-slider__control[for="slide-3"]{
+  background-color: black;
+}
+
+

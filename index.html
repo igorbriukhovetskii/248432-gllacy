@@ -8,9 +8,9 @@
   </head>
   <body>
   <!--Скрытые контролы слайдера-->
-  <input class="slider-control" type="radio" id="slide-1" name="promo" checked>
-  <input class="slider-control" type="radio" id="slide-2" name="promo">
-  <input class="slider-control" type="radio" id="slide-3" name="promo">
+  <input class="slider-control  visually-hidden" type="radio" id="slide-1" name="promo" aria-label="Показать первый слайд" checked>
+  <input class="slider-control  visually-hidden" type="radio" id="slide-2" name="promo" aria-label="Показать второй слайд">
+  <input class="slider-control  visually-hidden" type="radio" id="slide-3" name="promo" aria-label="Показать третий слайд">
   <div class="page-wrapper">
     <header class="main-header  container">
       <div class="main-header__left">
@@ -18,20 +18,20 @@
           <img src="img/logo.svg" alt="Логотип магазина Глейси" width="154" height="64">
         </div>
         <!--Главное меню сайта-->
-        <nav class="main-nav">
+        <nav class="main-nav" aria-label="Главное меню сайта">
           <ul class="main-nav__items">
             <li class="main-nav__item">
               <a class="main-nav__link" href="#">Каталог</a>
               <!--Всплывающее меню каталога-->
-              <div class="hover  main-nav__list-links">
-                <span class="main-nav__list-heading">Новинки</span>
-                <ul>
-                  <li class="main-nav__list-item"><a class="main-nav__list-link" href="catalog.html">Сливочное</a></li>
-                  <li class="main-nav__list-item"><a class="main-nav__list-link" href="#">Щербеты</a></li>
-                  <li class="main-nav__list-item"><a class="main-nav__list-link" href="#">Фруктовый лед</a></li>
-                  <li class="main-nav__list-item"><a class="main-nav__list-link" href="#">Мелорин</a></li>
+              <section class="hover  main-nav__hover-menu">
+                <h3 class="main-nav__list-heading">Новинки</h3>
+                <ul class="main-nav__hover-links">
+                  <li class="main-nav__hover-link"><a class="main-nav__list-link" href="catalog.html">Сливочное</a></li>
+                  <li class="main-nav__hover-link"><a class="main-nav__list-link" href="#">Щербеты</a></li>
+                  <li class="main-nav__hover-link"><a class="main-nav__list-link" href="#">Фруктовый лед</a></li>
+                  <li class="main-nav__hover-link"><a class="main-nav__list-link" href="#">Мелорин</a></li>
                 </ul>
-              </div>
+              </section>
             </li>
             <li class="main-nav__item">
               <a class="main-nav__link" href="#">Доставка и оплата</a>
@@ -51,30 +51,30 @@
             </svg>
             <!--Всплывающее меню с формой поиска-->
             <form class="hover  site-search" action="#" method="get">
-              <div class="site-search__field-group">
+              <p class="site-search__field-group">
                 <label class="field-label  site-search__field-label" for="search">Что ищем?</label>
-                <input class="input-field  site-search__input-field" id="search" type="text" placeholder="Что ищем?">
-              </div>
+                <input class="input-field  site-search__input-field" id="search" type="text" placeholder="Что ищем?" aria-label="Поиск по сайту">
+              </p>
             </form>
           </div>
           <!--Блок авторизации пользователя-->
           <div class="user-block__authorization">
             <!--Всплывающая форма авторизации пользователя-->
-            <form class="hover  authorization-form" action="#" method="post">
-              <div class="authorization-form__field-group">
+            <form class="hover  authorization-form" action="#" method="post" aria-label="Форма входа в учётную запись">
+              <p class="authorization-form__field-group">
                 <label class="field-label  authorization-form__field-label" for="login">Электронная почта</label>
                 <input class="input-field  authorization-form__input-field" id="login" type="email" placeholder="Электронная почта">
-              </div>
-              <div class="authorization-form__field-group">
+              </p>
+              <p class="authorization-form__field-group">
                 <label class="field-label  authorization-form__field-label" for="password">Пароль</label>
                 <input class="input-field  authorization-form__input-field" id="password" type="password" placeholder="Пароль">
-              </div>
+              </p>
               <div class="authorization-form__bottom">
-                <button class="btn authorization-form__btn" type="submit">Войти</button>
-                <div class="authorization-form__links">
-                  <a class="authorization-form__link">Забыли пароль?</a>
-                  <a class="authorization-form__link">Новая регистрация</a>
-                </div>
+                <button class="btn authorization-form__btn" type="submit" aria-label="Войти в учётную запись">Войти</button>
+                <p class="authorization-form__links">
+                  <a class="authorization-form__link" href="#">Забыли пароль?</a>
+                  <a class="authorization-form__link" href="#">Новая регистрация</a>
+                </p>
               </div>
             </form>
           </div>
@@ -83,14 +83,14 @@
             <svg class="icon  icon--cart" width="21" height="20">
               <use xlink:href="#basket"></use>
             </svg>
-            <a class="cart__link" href="#">Пусто</a>
+            <a class="cart__link" href="#" aria-label="Корзина покупателя">Пусто</a>
           </div>
         </div>
         <!--Часы работы и номера телефонов-->
-        <div class="main-header__info">
+        <p class="main-header__info">
           <span class="main-header__work-time">С 10 до 20, ежедневно</span>
           <span class="main-header__phone-number">8 812 450-25-25</span>
-        </div>
+        </p>
       </div>
     </header>
     <main class="page-content  container">
@@ -101,20 +101,20 @@
           <label class="promo-slider__control" for="slide-2"></label>
           <label class="promo-slider__control" for="slide-3"></label>
         </div>
-        <div class="promo-slider__inner">
-          <div class="promo-slider__slide-1">
+        <ul class="promo-slider__slides">
+          <li class="promo-slider__slide-1">
             <b class="promo-slider__text">Крем-брюле и пломбир с малиновым джемом</b>
-            <a class="btn promo-slider__btn">Давайте оба!</a>
-          </div>
-          <div class="promo-slider__slide-2">
+            <a class="btn promo-slider__btn" href="#" aria-label="Купить мороженое">Давайте оба!</a>
+          </li>
+          <li class="promo-slider__slide-2">
             <b class="promo-slider__text">Шоколадный пломбир и лимонный сорбет </b>
-            <a class="btn promo-slider__btn">Давайте оба!</a>
-          </div>
-          <div class="promo-slider__slide-1">
+            <a class="btn promo-slider__btn" href="#" aria-label="Купить мороженое">Давайте оба!</a>
+          </li>
+          <li class="promo-slider__slide-1">
             <b class="promo-slider__text">Пломбир с помадкой и клубничный щербет</b>
-            <a class="btn promo-slider__btn">Давайте оба!</a>
-          </div>
-        </div>
+            <a class="btn promo-slider__btn" href="#" aria-label="Купить мороженое">Давайте оба!</a>
+          </li>
+        </ul>
       </section>
       <!--Раздел специальных предложений-->
       <section class="special-offers">
@@ -123,14 +123,14 @@
           <p class="special-offers__text">
             При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
           </p>
-          <a class="btn  special-offers__btn">Хочу варенье!</a>
+          <a class="btn  special-offers__btn" href="#">Хочу варенье!</a>
         </div>
         <div class="special-offers__offer">
           <h2 class="special-offers__heading">Шоколадки даром!</h2>
           <p class="special-offers__text">
             При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
           </p>
-          <a class="btn  special-offers__btn">Хочу шоколадки!</a>
+          <a class="btn  special-offers__btn" href="#">Хочу шоколадки!</a>
         </div>
       </section>
       <!--Раздел с карточками товаров-->
@@ -222,11 +222,13 @@
             Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит.
             Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
           </p>
-          <div class="subscription__bottom">
-            <label class="field-label  subscription__field-label" for="subscription">Электронная почта</label>
-            <input class="input-field  subscription__input-field" id="subscription" type="email" placeholder="Электронная почта">
-            <a class="btn  subscription__btn">Отправить</a>
-          </div>
+          <form class="subscription__bottom" action="#" method="post">
+            <p class="subscription__field-group">
+              <label class="field-label  subscription__field-label" for="subscription">Электронная почта</label>
+              <input class="input-field  subscription__input-field" id="subscription" type="email" placeholder="Электронная почта" aria-label="Электронная почта для подписки на рассылку">
+            </p>
+            <button class="btn  subscription__btn" type="submit">Отправить</button>
+          </form>
         </section>
       </div>
     </main>
@@ -252,7 +254,7 @@
               <span class="contacts__work-time">(с 10 до 20 ежедневно)</span>
             </p>
           </div>
-          <a class="btn  contacts__btn">Форма обратной связи</a>
+          <a class="btn  contacts__btn" href="#">Форма обратной связи</a>
         </div>
       </div>
     </section>
@@ -285,21 +287,22 @@
   </div>
   <div class="modal  write-us">
     <div class="write-us__inner">
+      <button class="write-us__close-btn" style="font-size: 0">Закрыть окно</button>
       <p class="write-us__heading">Мы обязательно вам ответим!</p>
-      <form class="write-us__form" action="#" method="post">
-        <div class="write-us__field-group">
+      <form class="write-us__form" action="#" method="post" aria-label="Форма обратной связи">
+        <p class="write-us__field-group">
           <label class="field-label  write-us__field-label" for="user-name">Как вас зовут?</label>
           <input class="input-field  write-us__input-field" id="user-name" name="user-email" type="text" placeholder="Как вас зовут?" required>
-        </div>
-        <div class="write-us__field-group">
+        </p>
+        <p class="write-us__field-group">
           <label class="field-label  write-us__field-label" for="user-email">Ваша почта для ответа?</label>
           <input class="input-field  write-us__input-field" id="user-email" name="user-email" type="email" placeholder="Ваша почта для ответа?" required>
-        </div>
-        <div class="write-us__field-group">
+        </p>
+        <p class="write-us__field-group">
           <label class="field-label  write-us__field-label" for="user-message">Напишите что-нибудь...</label>
           <textarea class="input-field  write-us__user-message" id="user-message" name="user-message"
                     placeholder="Напишите что-нибудь..." rows="4" cols="40" required></textarea>
-        </div>
+        </p>
         <button class="btn  write-us__btn" type="submit">Отправить</button>
       </form>
     </div>
