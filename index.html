@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>Глейси: магазин-мороженого</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
   <!--Скрытые контролы слайдера-->
-  <input class="slider-control  visually-hidden" type="radio" id="slide-1" name="promo" aria-label="Показать первый слайд" checked>
-  <input class="slider-control  visually-hidden" type="radio" id="slide-2" name="promo" aria-label="Показать второй слайд">
-  <input class="slider-control  visually-hidden" type="radio" id="slide-3" name="promo" aria-label="Показать третий слайд">
+  <input class="slider-control  screen-readers-only" type="radio" id="slide-1" name="promo" aria-label="Показать первый слайд" checked>
+  <input class="slider-control  screen-readers-only" type="radio" id="slide-2" name="promo" aria-label="Показать второй слайд">
+  <input class="slider-control  screen-readers-only" type="radio" id="slide-3" name="promo" aria-label="Показать третий слайд">
   <div class="page-wrapper">
     <header class="main-header  container">
       <div class="main-header__left">
@@ -24,12 +25,12 @@
               <a class="main-nav__link" href="#">Каталог</a>
               <!--Всплывающее меню каталога-->
               <section class="hover  main-nav__hover-menu">
-                <h3 class="main-nav__list-heading">Новинки</h3>
-                <ul class="main-nav__hover-links">
-                  <li class="main-nav__hover-link"><a class="main-nav__list-link" href="catalog.html">Сливочное</a></li>
-                  <li class="main-nav__hover-link"><a class="main-nav__list-link" href="#">Щербеты</a></li>
-                  <li class="main-nav__hover-link"><a class="main-nav__list-link" href="#">Фруктовый лед</a></li>
-                  <li class="main-nav__hover-link"><a class="main-nav__list-link" href="#">Мелорин</a></li>
+                <h3 class="main-nav__hover-heading">Новинки</h3>
+                <ul class="main-nav__hover-items">
+                  <li class="main-nav__hover-item"><a class="main-nav__hover-link" href="catalog.html">Сливочное</a></li>
+                  <li class="main-nav__hover-item"><a class="main-nav__hover-link" href="#">Щербеты</a></li>
+                  <li class="main-nav__hover-item"><a class="main-nav__hover-link" href="#">Фруктовый лед</a></li>
+                  <li class="main-nav__hover-item"><a class="main-nav__hover-link" href="#">Мелорин</a></li>
                 </ul>
               </section>
             </li>
@@ -46,9 +47,7 @@
         <!--Пользовательский блок управления-->
         <div class="user-block">
           <div class="user-block__search">
-            <svg width="17" height="17" class="icon  icon--loupe">
-              <use xlink:href="#loupe"></use>
-            </svg>
+            <a class="user-block__search-link" href=""><span class="screen-readers-only">Поиск по сайту</span></a>
             <!--Всплывающее меню с формой поиска-->
             <form class="hover  site-search" action="#" method="get">
               <p class="site-search__field-group">
@@ -59,8 +58,9 @@
           </div>
           <!--Блок авторизации пользователя-->
           <div class="user-block__authorization">
+            <a class="user-block__authorization-link" href="#" aria-label="Вход в учётную запись пользователя">Вход</a>
             <!--Всплывающая форма авторизации пользователя-->
-            <form class="hover  authorization-form" action="#" method="post" aria-label="Форма входа в учётную запись">
+            <form class="hover  authorization-form" action="#" method="post">
               <p class="authorization-form__field-group">
                 <label class="field-label  authorization-form__field-label" for="login">Электронная почта</label>
                 <input class="input-field  authorization-form__input-field" id="login" type="email" placeholder="Электронная почта">
@@ -70,7 +70,7 @@
                 <input class="input-field  authorization-form__input-field" id="password" type="password" placeholder="Пароль">
               </p>
               <div class="authorization-form__bottom">
-                <button class="btn authorization-form__btn" type="submit" aria-label="Войти в учётную запись">Войти</button>
+                <button class="btn authorization-form__btn" type="submit">Войти</button>
                 <p class="authorization-form__links">
                   <a class="authorization-form__link" href="#">Забыли пароль?</a>
                   <a class="authorization-form__link" href="#">Новая регистрация</a>
@@ -79,11 +79,8 @@
             </form>
           </div>
           <!--Корзина-->
-          <div class="cart  cart--empty">
-            <svg class="icon  icon--cart" width="21" height="20">
-              <use xlink:href="#basket"></use>
-            </svg>
-            <a class="cart__link" href="#" aria-label="Корзина покупателя">Пусто</a>
+          <div class="cart">
+            <a class="cart__link" aria-label="Корзина покупателя">Пусто</a>
           </div>
         </div>
         <!--Часы работы и номера телефонов-->
@@ -101,36 +98,36 @@
           <label class="promo-slider__control" for="slide-2"></label>
           <label class="promo-slider__control" for="slide-3"></label>
         </div>
-        <ul class="promo-slider__slides">
-          <li class="promo-slider__slide-1">
+        <div class="promo-slider__slides">
+          <div class="promo-slider__slide-1">
             <b class="promo-slider__text">Крем-брюле и пломбир с малиновым джемом</b>
             <a class="btn promo-slider__btn" href="#" aria-label="Купить мороженое">Давайте оба!</a>
-          </li>
-          <li class="promo-slider__slide-2">
+          </div>
+          <div class="promo-slider__slide-2">
             <b class="promo-slider__text">Шоколадный пломбир и лимонный сорбет </b>
             <a class="btn promo-slider__btn" href="#" aria-label="Купить мороженое">Давайте оба!</a>
-          </li>
-          <li class="promo-slider__slide-1">
+          </div>
+          <div class="promo-slider__slide-1">
             <b class="promo-slider__text">Пломбир с помадкой и клубничный щербет</b>
             <a class="btn promo-slider__btn" href="#" aria-label="Купить мороженое">Давайте оба!</a>
-          </li>
-        </ul>
+          </div>
+        </div>
       </section>
       <!--Раздел специальных предложений-->
       <section class="special-offers">
-        <div class="special-offers__offer">
+        <div class="special-offers__offer  special-offers__offer--raspberries">
           <h2 class="special-offers__heading">Малинка даром!</h2>
           <p class="special-offers__text">
             При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
           </p>
-          <a class="btn  special-offers__btn" href="#">Хочу варенье!</a>
+          <a class="btn  special-offers__btn  special-offers__btn--raspberries" href="#">Хочу варенье!</a>
         </div>
-        <div class="special-offers__offer">
+        <div class="special-offers__offer  special-offers__offer--chocolates">
           <h2 class="special-offers__heading">Шоколадки даром!</h2>
           <p class="special-offers__text">
             При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
           </p>
-          <a class="btn  special-offers__btn" href="#">Хочу шоколадки!</a>
+          <a class="btn  special-offers__btn  special-offers__btn--chocolates" href="#">Хочу шоколадки!</a>
         </div>
       </section>
       <!--Раздел с карточками товаров-->
@@ -145,7 +142,7 @@
         <article class="product  product--featured">
           <div class="product__image-wrapper">
             <img class="product__item-image" src="img/content/ice-cream-1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
-            <span class="product__item-price">310<svg width="26" height="31"><use xlink:href="#ruble"></use></svg><span>/кг</span></span>
+            <span class="product__item-price">310<svg width="26" height="31"><use xlink:href="#ruble"></use></svg><span class="product__item-weight">/кг</span></span>
           </div>
           <a class="product__catalog-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
           <div class="product__hover">
@@ -156,7 +153,7 @@
         <article class="product  product--featured">
           <div class="product__image-wrapper">
             <img class="product__item-image" src="img/content/ice-cream-2.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
-            <span class="product__item-price">380<svg width="26" height="31"><use xlink:href="#ruble"></use></svg><span>/кг</span></span>
+            <span class="product__item-price">380<svg width="26" height="31"><use xlink:href="#ruble"></use></svg><span class="product__item-weight">/кг</span></span>
           </div>
           <a class="product__catalog-link" href="#">Сливочно-кофейное с кусочками шоколада</a>
           <div class="product__hover">
@@ -167,7 +164,7 @@
         <article class="product  product--featured">
           <div class="product__image-wrapper">
             <img class="product__item-image" src="img/content/ice-cream-3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
-            <span class="product__item-price">355<svg width="26" height="31"><use xlink:href="#ruble"></use></svg><span>/кг</span></span>
+            <span class="product__item-price">355<svg width="26" height="31"><use xlink:href="#ruble"></use></svg><span class="product__item-weight">/кг</span></span>
           </div>
           <a class="product__catalog-link" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
           <div class="product__hover">
@@ -178,7 +175,7 @@
         <article class="product  product--featured">
           <div class="product__image-wrapper">
             <img class="product__item-image" src="img/content/ice-cream-4.jpg" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
-            <span class="product__item-price">415<svg width="26" height="31"><use xlink:href="#ruble"></use></svg><span>/кг</span></span>
+            <span class="product__item-price">415<svg width="26" height="31"><use xlink:href="#ruble"></use></svg><span class="product__item-weight">/кг</span></span>
           </div>
           <a class="product__catalog-link" href="#">Сливочное крем-брюле с карамельной подливкой</a>
           <div class="product__hover">
@@ -218,17 +215,19 @@
         </article>
         <!--Подписка на рассылку-->
         <section class="subscription">
-          <p class="subscription__offer">
-            Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит.
-            Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
-          </p>
-          <form class="subscription__bottom" action="#" method="post">
-            <p class="subscription__field-group">
-              <label class="field-label  subscription__field-label" for="subscription">Электронная почта</label>
-              <input class="input-field  subscription__input-field" id="subscription" type="email" placeholder="Электронная почта" aria-label="Электронная почта для подписки на рассылку">
+          <div class="subscription__inner">
+            <p class="subscription__offer">
+              Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит.
+              Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
             </p>
-            <button class="btn  subscription__btn" type="submit">Отправить</button>
-          </form>
+            <form class="subscription__bottom" action="#" method="post">
+              <p class="subscription__field-group">
+                <label class="field-label  subscription__field-label" for="subscription">Электронная почта</label>
+                <input class="input-field  subscription__input-field" id="subscription" type="email" placeholder="Электронная почта" aria-label="Электронная почта для подписки на рассылку">
+              </p>
+              <button class="btn  subscription__btn" type="submit">Отправить</button>
+            </form>
+          </div>
         </section>
       </div>
     </main>
@@ -261,49 +260,51 @@
     <footer class="main-footer  container">
       <div class="social">
         <div class="social__inner">
-          <a href="https://twitter.com">Мы В Twitter</a>
-          <a href="https://instagram.com">Мы в Instagram</a>
-          <a href="https://facebook.com">Мы в Facebook</a>
-          <a href="https://vk.com">Мы В Контакте</a>
+          <a class="social__link  social__link--twitter" href="https://twitter.com"><span class="screen-readers-only">Мы В Twitter</span></a>
+          <a class="social__link  social__link--instagram" href="https://instagram.com"><span class="screen-readers-only">Мы в Instagram</span></a>
+          <a class="social__link  social__link--fb" href="https://facebook.com"><span class="screen-readers-only">Мы в Facebook</span></a>
+          <a class="social__link  social__link--vk" href="https://vk.com"><span class="screen-readers-only">Мы В Контакте</span></a>
         </div>
       </div>
       <div class="main-footer__info-links">
-        <div class="main-footer__info-links-group">
+        <div class="main-footer__links-group">
           <a class="main-footer__info-link  main-footer__info-link--favorite" href="#">Для поставщиков</a>
           <a class="main-footer__info-link" href="#">О производстве</a>
         </div>
-        <div class="main-footer__info-links-group">
+        <div class="main-footer__links-group">
           <a class="main-footer__info-link" href="#">Наши документы</a>
           <a class="main-footer__info-link" href="#">Экологические стандарты</a>
         </div>
       </div>
       <div class="main-footer__copyright">
-        <img src="img/logo-htmlacademy.svg" alt="Логотип HTML Академии" width="108" height="39">
-        <p>
-          Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>© 2017
+        <img class="main-footer__logo" src="img/logo-htmlacademy.svg" alt="Логотип HTML Академии" width="108" height="39">
+        <p class="main-footer__text">
+          Сделано в <a class="main-footer__info-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>© 2017
         </p>
       </div>
     </footer>
   </div>
   <div class="modal  write-us">
     <div class="write-us__inner">
-      <button class="write-us__close-btn">Закрыть окно</button>
+      <button class="write-us__close-btn"><span class="screen-readers-only">Закрыть окно</span></button>
       <p class="write-us__heading">Мы обязательно вам ответим!</p>
       <form class="write-us__form" action="#" method="post" aria-label="Форма обратной связи">
         <p class="write-us__field-group">
           <label class="field-label  write-us__field-label" for="user-name">Как вас зовут?</label>
-          <input class="input-field  write-us__input-field" id="user-name" name="user-email" type="text" placeholder="Как вас зовут?" required>
+          <input class="input-field  write-us__input-field" id="user-name" name="user-email" type="text"
+                 placeholder="Как вас зовут?" aria-label="Введите ваше имя" required>
         </p>
         <p class="write-us__field-group">
           <label class="field-label  write-us__field-label" for="user-email">Ваша почта для ответа?</label>
-          <input class="input-field  write-us__input-field" id="user-email" name="user-email" type="email" placeholder="Ваша почта для ответа?" required>
+          <input class="input-field  write-us__input-field" id="user-email" name="user-email" type="email"
+                 placeholder="Ваша почта для ответа?" aria-label="Введите адрес электронной почты для ответа" required>
         </p>
         <p class="write-us__field-group">
           <label class="field-label  write-us__field-label" for="user-message">Напишите что-нибудь...</label>
           <textarea class="input-field  write-us__user-message" id="user-message" name="user-message"
-                    placeholder="Напишите что-нибудь..." rows="4" cols="40" required></textarea>
+                    placeholder="Напишите что-нибудь..." aria-label="Введите ваше сообщение" rows="4" cols="40" required></textarea>
         </p>
-        <button class="btn  write-us__btn" type="submit">Отправить</button>
+        <button class="btn  write-us__btn" type="submit" aria-label="Отправить сообщение">Отправить</button>
       </form>
     </div>
   </div>
