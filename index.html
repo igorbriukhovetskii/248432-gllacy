@@ -14,7 +14,7 @@
   <input class="slider-control  screen-readers-only" type="radio" id="slide-3" name="promo" aria-label="Показать третий слайд">
   <div class="page-wrapper">
     <header class="main-header  container">
-      <div class="main-header__left">
+      <div class="main-header__inner">
         <div class="main-logo">
           <img src="img/logo.svg" alt="Логотип магазина Глейси" width="154" height="64">
         </div>
@@ -42,11 +42,9 @@
             </li>
           </ul>
         </nav>
-      </div>
-      <div class="main-header__right">
         <!--Пользовательский блок управления-->
         <div class="user-block">
-          <div class="user-block__search">
+          <div class="user-block__search  user-block__item">
             <a class="user-block__search-link" href=""><span class="screen-readers-only">Поиск по сайту</span></a>
             <!--Всплывающее меню с формой поиска-->
             <form class="hover  site-search" action="#" method="get">
@@ -57,7 +55,7 @@
             </form>
           </div>
           <!--Блок авторизации пользователя-->
-          <div class="user-block__authorization">
+          <div class="user-block__authorization  user-block__item">
             <a class="user-block__authorization-link" href="#" aria-label="Вход в учётную запись пользователя">Вход</a>
             <!--Всплывающая форма авторизации пользователя-->
             <form class="hover  authorization-form" action="#" method="post">
@@ -79,7 +77,7 @@
             </form>
           </div>
           <!--Корзина-->
-          <div class="cart">
+          <div class="cart  user-block__item">
             <a class="cart__link" aria-label="Корзина покупателя">Пусто</a>
           </div>
         </div>
@@ -98,19 +96,17 @@
           <label class="promo-slider__control" for="slide-2"></label>
           <label class="promo-slider__control" for="slide-3"></label>
         </div>
-        <div class="promo-slider__slides">
-          <div class="promo-slider__slide-1">
-            <b class="promo-slider__text">Крем-брюле и пломбир с малиновым джемом</b>
-            <a class="btn promo-slider__btn" href="#" aria-label="Купить мороженое">Давайте оба!</a>
-          </div>
-          <div class="promo-slider__slide-2">
-            <b class="promo-slider__text">Шоколадный пломбир и лимонный сорбет </b>
-            <a class="btn promo-slider__btn" href="#" aria-label="Купить мороженое">Давайте оба!</a>
-          </div>
-          <div class="promo-slider__slide-1">
-            <b class="promo-slider__text">Пломбир с помадкой и клубничный щербет</b>
-            <a class="btn promo-slider__btn" href="#" aria-label="Купить мороженое">Давайте оба!</a>
-          </div>
+        <div class="promo-slider__slide-1">
+          <b class="promo-slider__text">Крем-брюле и пломбир<br> с малиновым джемом</b>
+          <a class="btn promo-slider__btn" href="#" aria-label="Купить мороженое">Давайте оба!</a>
+        </div>
+        <div class="promo-slider__slide-2">
+          <b class="promo-slider__text">Шоколадный пломбир<br> и лимонный сорбет </b>
+          <a class="btn promo-slider__btn" href="#" aria-label="Купить мороженое">Давайте оба!</a>
+        </div>
+        <div class="promo-slider__slide-3">
+          <b class="promo-slider__text">Пломбир с помадкой<br> и клубничный щербет</b>
+          <a class="btn promo-slider__btn" href="#" aria-label="Купить мороженое">Давайте оба!</a>
         </div>
       </section>
       <!--Раздел специальных предложений-->
@@ -131,7 +127,7 @@
         </div>
       </section>
       <!--Раздел с карточками товаров-->
-      <section class="main-page-showcase">
+      <section class="showcase">
         <!--Векторное изображение знака рубля для использования в карточках товаров-->
         <svg xmlns="http://www.w3.org/2000/svg" display="none">
           <symbol viewBox="0 0 31 36" id="ruble" xmlns="http://www.w3.org/2000/svg">
@@ -186,26 +182,26 @@
       <!--Описание магазина-->
       <section class="shop-description">
         <h1 class="shop-description__heading">Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h1>
-          <div class="shop-description__left-column">
-            <p class="shop-description__item">
-              Все наше мороженое изготавливается на собственном производстве,
-              с использованием современного оборудования и проверенных временем технологий.
-            </p>
-            <p class="shop-description__item">
-              Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества.
-              Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
-            </p>
-          </div>
-          <div class="shop-description__right-column">
-            <p class="shop-description__item">
-              Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний,
-              с которыми нас связывает долговременное сотрудничество.
-            </p>
-            <p class="shop-description__item">
-              Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке,
-              который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
-            </p>
-          </div>
+        <div class="shop-description__column">
+          <p class="shop-description__item">
+            Все наше мороженое изготавливается на собственном производстве,
+            с использованием современного оборудования и проверенных временем технологий.
+          </p>
+          <p class="shop-description__item">
+            Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества.
+            Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
+          </p>
+        </div>
+        <div class="shop-description__column">
+          <p class="shop-description__item">
+            Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний,
+            с которыми нас связывает долговременное сотрудничество.
+          </p>
+          <p class="shop-description__item">
+            Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке,
+            который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
+          </p>
+        </div>
       </section>
       <div class="page-content__row">
         <!--Статья из блога-->
@@ -233,7 +229,7 @@
     </main>
     <!--Блок карты-->
     <section class="map">
-      <div class="map__inner">
+      <div class="map__inner  container">
         <!--Адрес и контактный телефон-->
         <div class="contacts">
           <div class="contacts__address-block">
@@ -258,29 +254,41 @@
       </div>
     </section>
     <footer class="main-footer  container">
-      <div class="social">
-        <div class="social__inner">
-          <a class="social__link  social__link--twitter" href="https://twitter.com"><span class="screen-readers-only">Мы В Twitter</span></a>
-          <a class="social__link  social__link--instagram" href="https://instagram.com"><span class="screen-readers-only">Мы в Instagram</span></a>
-          <a class="social__link  social__link--fb" href="https://facebook.com"><span class="screen-readers-only">Мы в Facebook</span></a>
-          <a class="social__link  social__link--vk" href="https://vk.com"><span class="screen-readers-only">Мы В Контакте</span></a>
+      <div class="main-footer__inner">
+        <ul class="social">
+          <li class="social__item">
+            <a class="social__link  social__link--twitter" href="https://twitter.com"><span class="screen-readers-only">Мы В Twitter</span></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link  social__link--instagram" href="https://instagram.com"><span class="screen-readers-only">Мы в Instagram</span></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link  social__link--fb" href="https://facebook.com"><span class="screen-readers-only">Мы в Facebook</span></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link  social__link--vk" href="https://vk.com"><span class="screen-readers-only">Мы В Контакте</span></a>
+          </li>
+        </ul>
+        <ul class="main-footer__info-items">
+          <li class="main-footer__info-item">
+            <a class="main-footer__info-link  main-footer__info-link--favorite" href="#">Для поставщиков</a>
+          </li>
+          <li class="main-footer__info-item">
+            <a class="main-footer__info-link" href="#">О производстве</a>
+          </li>
+          <li class="main-footer__info-item">
+            <a class="main-footer__info-link" href="#">Наши документы</a>
+          </li>
+          <li class="main-footer__info-item">
+            <a class="main-footer__info-link" href="#">Экологические стандарты</a>
+          </li>
+        </ul>
+        <div class="main-footer__copyright">
+          <img class="main-footer__logo" src="img/logo-htmlacademy.svg" alt="Логотип HTML Академии" width="108" height="39">
+          <p class="main-footer__copyright-text">
+            Сделано в <a class="main-footer__info-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017
+          </p>
         </div>
-      </div>
-      <div class="main-footer__info-links">
-        <div class="main-footer__links-group">
-          <a class="main-footer__info-link  main-footer__info-link--favorite" href="#">Для поставщиков</a>
-          <a class="main-footer__info-link" href="#">О производстве</a>
-        </div>
-        <div class="main-footer__links-group">
-          <a class="main-footer__info-link" href="#">Наши документы</a>
-          <a class="main-footer__info-link" href="#">Экологические стандарты</a>
-        </div>
-      </div>
-      <div class="main-footer__copyright">
-        <img class="main-footer__logo" src="img/logo-htmlacademy.svg" alt="Логотип HTML Академии" width="108" height="39">
-        <p class="main-footer__text">
-          Сделано в <a class="main-footer__info-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>© 2017
-        </p>
       </div>
     </footer>
   </div>
