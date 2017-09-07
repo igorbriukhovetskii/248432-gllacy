@@ -9,12 +9,12 @@
   </head>
   <body>
   <!--Скрытые контролы слайдера-->
-  <input class="slider-control  screen-readers-only" type="radio" id="slide-1" name="promo" aria-label="Показать первый слайд" checked>
-  <input class="slider-control  screen-readers-only" type="radio" id="slide-2" name="promo" aria-label="Показать второй слайд">
-  <input class="slider-control  screen-readers-only" type="radio" id="slide-3" name="promo" aria-label="Показать третий слайд">
+  <input class="slider-control" type="radio" id="slide-1" name="promo" checked>
+  <input class="slider-control" type="radio" id="slide-2" name="promo">
+  <input class="slider-control" type="radio" id="slide-3" name="promo">
   <div class="page-wrapper">
     <header class="main-header  container">
-      <div class="main-header__inner">
+      <div class="main-header__inner  content-wrapper">
         <div class="main-logo">
           <img src="img/logo.svg" alt="Логотип магазина Глейси" width="154" height="64">
         </div>
@@ -48,10 +48,10 @@
             <a class="user-block__search-link" href=""><span class="screen-readers-only">Поиск по сайту</span></a>
             <!--Всплывающее меню с формой поиска-->
             <form class="hover  site-search" action="#" method="get">
-              <p class="site-search__field-group">
+              <div class="site-search__field-group">
                 <label class="field-label  site-search__field-label" for="search">Что ищем?</label>
                 <input class="input-field  site-search__input-field" id="search" type="text" placeholder="Что ищем?" aria-label="Поиск по сайту">
-              </p>
+              </div>
             </form>
           </div>
           <!--Блок авторизации пользователя-->
@@ -59,20 +59,20 @@
             <a class="user-block__authorization-link" href="#" aria-label="Вход в учётную запись пользователя">Вход</a>
             <!--Всплывающая форма авторизации пользователя-->
             <form class="hover  authorization-form" action="#" method="post">
-              <p class="authorization-form__field-group">
+              <div class="authorization-form__field-group">
                 <label class="field-label  authorization-form__field-label" for="login">Электронная почта</label>
                 <input class="input-field  authorization-form__input-field" id="login" type="email" placeholder="Электронная почта">
-              </p>
-              <p class="authorization-form__field-group">
+              </div>
+              <div class="authorization-form__field-group">
                 <label class="field-label  authorization-form__field-label" for="password">Пароль</label>
                 <input class="input-field  authorization-form__input-field" id="password" type="password" placeholder="Пароль">
-              </p>
+              </div>
               <div class="authorization-form__bottom">
                 <button class="btn authorization-form__btn" type="submit">Войти</button>
-                <p class="authorization-form__links">
-                  <a class="authorization-form__link" href="#">Забыли пароль?</a>
-                  <a class="authorization-form__link" href="#">Новая регистрация</a>
-                </p>
+                <div class="authorization-form__links">
+                  <a class="link  link--dark  authorization-form__link" href="#">Забыли пароль?</a>
+                  <a class="link  link--dark  authorization-form__link" href="#">Новая регистрация</a>
+                </div>
               </div>
             </form>
           </div>
@@ -90,7 +90,7 @@
     </header>
     <main class="page-content  container">
       <!--Блок промо-слайдера-->
-      <section class="promo-slider">
+      <section class="promo-slider  content-wrapper">
         <div class="promo-slider__controls">
           <label class="promo-slider__control" for="slide-1"></label>
           <label class="promo-slider__control" for="slide-2"></label>
@@ -110,24 +110,28 @@
         </div>
       </section>
       <!--Раздел специальных предложений-->
-      <section class="special-offers">
+      <section class="special-offers  content-wrapper">
         <div class="special-offers__offer  special-offers__offer--raspberries">
           <h2 class="special-offers__heading">Малинка даром!</h2>
           <p class="special-offers__text">
             При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
           </p>
-          <a class="btn  special-offers__btn  special-offers__btn--raspberries" href="#">Хочу варенье!</a>
+          <div class="special-offers__btn-wrapper">
+            <a class="btn  special-offers__btn" href="#">Хочу варенье!</a>
+          </div>
         </div>
         <div class="special-offers__offer  special-offers__offer--chocolates">
           <h2 class="special-offers__heading">Шоколадки даром!</h2>
           <p class="special-offers__text">
             При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
           </p>
-          <a class="btn  special-offers__btn  special-offers__btn--chocolates" href="#">Хочу шоколадки!</a>
+          <div class="special-offers__btn-wrapper">
+            <a class="btn  special-offers__btn" href="#">Хочу шоколадки!</a>
+          </div>
         </div>
       </section>
       <!--Раздел с карточками товаров-->
-      <section class="showcase">
+      <section class="showcase  content-wrapper">
         <!--Векторное изображение знака рубля для использования в карточках товаров-->
         <svg xmlns="http://www.w3.org/2000/svg" display="none">
           <symbol viewBox="0 0 31 36" id="ruble" xmlns="http://www.w3.org/2000/svg">
@@ -138,10 +142,10 @@
         <article class="product  product--featured">
           <div class="product__image-wrapper">
             <img class="product__item-image" src="img/content/ice-cream-1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
-            <span class="product__item-price">310<svg width="26" height="31"><use xlink:href="#ruble"></use></svg><span class="product__item-weight">/кг</span></span>
+            <span class="product__item-price">310<svg width="31" height="36"><use xlink:href="#ruble"></use></svg><span class="product__item-weight">/кг</span></span>
           </div>
           <a class="product__catalog-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-          <div class="product__hover">
+          <div class="product__btn-wrapper">
             <a class="btn  product__btn" href="#">Быстрый просмотр</a>
           </div>
         </article>
@@ -149,10 +153,10 @@
         <article class="product  product--featured">
           <div class="product__image-wrapper">
             <img class="product__item-image" src="img/content/ice-cream-2.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
-            <span class="product__item-price">380<svg width="26" height="31"><use xlink:href="#ruble"></use></svg><span class="product__item-weight">/кг</span></span>
+            <span class="product__item-price">380<svg width="31" height="36"><use xlink:href="#ruble"></use></svg><span class="product__item-weight">/кг</span></span>
           </div>
           <a class="product__catalog-link" href="#">Сливочно-кофейное с кусочками шоколада</a>
-          <div class="product__hover">
+          <div class="product__btn-wrapper">
             <a class="btn  product__btn" href="#">Быстрый просмотр</a>
           </div>
         </article>
@@ -160,10 +164,10 @@
         <article class="product  product--featured">
           <div class="product__image-wrapper">
             <img class="product__item-image" src="img/content/ice-cream-3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
-            <span class="product__item-price">355<svg width="26" height="31"><use xlink:href="#ruble"></use></svg><span class="product__item-weight">/кг</span></span>
+            <span class="product__item-price">355<svg width="31" height="36"><use xlink:href="#ruble"></use></svg><span class="product__item-weight">/кг</span></span>
           </div>
           <a class="product__catalog-link" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
-          <div class="product__hover">
+          <div class="product__btn-wrapper">
             <a class="btn  product__btn" href="#">Быстрый просмотр</a>
           </div>
         </article>
@@ -171,43 +175,43 @@
         <article class="product  product--featured">
           <div class="product__image-wrapper">
             <img class="product__item-image" src="img/content/ice-cream-4.jpg" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
-            <span class="product__item-price">415<svg width="26" height="31"><use xlink:href="#ruble"></use></svg><span class="product__item-weight">/кг</span></span>
+            <span class="product__item-price">415<svg width="31" height="36"><use xlink:href="#ruble"></use></svg><span class="product__item-weight">/кг</span></span>
           </div>
           <a class="product__catalog-link" href="#">Сливочное крем-брюле с карамельной подливкой</a>
-          <div class="product__hover">
+          <div class="product__btn-wrapper">
             <a class="btn  product__btn" href="#">Быстрый просмотр</a>
           </div>
         </article>
       </section>
       <!--Описание магазина-->
-      <section class="shop-description">
+      <section class="shop-description  content-wrapper">
         <h1 class="shop-description__heading">Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h1>
         <div class="shop-description__column">
-          <p class="shop-description__item">
+          <p class="shop-description__item  shop-description__item--quality">
             Все наше мороженое изготавливается на собственном производстве,
             с использованием современного оборудования и проверенных временем технологий.
           </p>
-          <p class="shop-description__item">
+          <p class="shop-description__item  shop-description__item--ecology">
             Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества.
             Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
           </p>
         </div>
         <div class="shop-description__column">
-          <p class="shop-description__item">
+          <p class="shop-description__item  shop-description__item--trust">
             Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний,
             с которыми нас связывает долговременное сотрудничество.
           </p>
-          <p class="shop-description__item">
-            Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке,
+          <p class="shop-description__item  shop-description__item--delivery">
+            Доставка нашего мороженого до заказчиков осуществляется в&nbsp;специальном термопаке,
             который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
           </p>
         </div>
       </section>
-      <div class="page-content__row">
+      <div class="page-content__row  content-wrapper">
         <!--Статья из блога-->
         <article class="post">
           <h3 class="post__heading">Новое в нашем блоге</h3>
-          <a class="post__link" href="#">10 способов сервировки фруктовых щербетов к столу</a>
+          <a class="post__link" href="#">10 способов сервировки фруктовых щербетов к<br> столу</a>
         </article>
         <!--Подписка на рассылку-->
         <section class="subscription">
@@ -217,10 +221,10 @@
               Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
             </p>
             <form class="subscription__bottom" action="#" method="post">
-              <p class="subscription__field-group">
+              <div class="subscription__field-group">
                 <label class="field-label  subscription__field-label" for="subscription">Электронная почта</label>
                 <input class="input-field  subscription__input-field" id="subscription" type="email" placeholder="Электронная почта" aria-label="Электронная почта для подписки на рассылку">
-              </p>
+              </div>
               <button class="btn  subscription__btn" type="submit">Отправить</button>
             </form>
           </div>
@@ -234,7 +238,7 @@
         <div class="contacts">
           <div class="contacts__address-block">
             <p class="contacts__description">
-              Адрес главного офиса и офлайн магазина:
+              Адрес главного офиса<br> и офлайн магазина:
             </p>
             <p class="contacts__address">
               ул. Большая Конюшенная 19/8, Санкт-Петербург
@@ -245,7 +249,7 @@
               Для заказов по телефону:
             </p>
             <p class="contacts__phone">
-              8 812 450-25-25
+              8 812 450-25-25<br>
               <span class="contacts__work-time">(с 10 до 20 ежедневно)</span>
             </p>
           </div>
@@ -254,7 +258,7 @@
       </div>
     </section>
     <footer class="main-footer  container">
-      <div class="main-footer__inner">
+      <div class="main-footer__inner  content-wrapper">
         <ul class="social">
           <li class="social__item">
             <a class="social__link  social__link--twitter" href="https://twitter.com"><span class="screen-readers-only">Мы В Twitter</span></a>
@@ -271,49 +275,51 @@
         </ul>
         <ul class="main-footer__info-items">
           <li class="main-footer__info-item">
-            <a class="main-footer__info-link  main-footer__info-link--favorite" href="#">Для поставщиков</a>
+            <a class="main-footer__info-link  main-footer__info-link--favorite  link  link--light" href="#">Для поставщиков</a>
           </li>
           <li class="main-footer__info-item">
-            <a class="main-footer__info-link" href="#">О производстве</a>
+            <a class="main-footer__info-link  link  link--light" href="#">О производстве</a>
           </li>
           <li class="main-footer__info-item">
-            <a class="main-footer__info-link" href="#">Наши документы</a>
+            <a class="main-footer__info-link  link  link--light" href="#">Наши документы</a>
           </li>
           <li class="main-footer__info-item">
-            <a class="main-footer__info-link" href="#">Экологические стандарты</a>
+            <a class="main-footer__info-link  link  link--light" href="#">Экологические стандарты</a>
           </li>
         </ul>
         <div class="main-footer__copyright">
           <img class="main-footer__logo" src="img/logo-htmlacademy.svg" alt="Логотип HTML Академии" width="108" height="39">
           <p class="main-footer__copyright-text">
-            Сделано в <a class="main-footer__info-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017
+            Сделано в <a class="main-footer__info-link  link  link--light" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017
           </p>
         </div>
       </div>
     </footer>
-  </div>
-  <div class="modal  write-us">
-    <div class="write-us__inner">
-      <button class="write-us__close-btn"><span class="screen-readers-only">Закрыть окно</span></button>
-      <p class="write-us__heading">Мы обязательно вам ответим!</p>
-      <form class="write-us__form" action="#" method="post" aria-label="Форма обратной связи">
-        <p class="write-us__field-group">
-          <label class="field-label  write-us__field-label" for="user-name">Как вас зовут?</label>
-          <input class="input-field  write-us__input-field" id="user-name" name="user-email" type="text"
-                 placeholder="Как вас зовут?" aria-label="Введите ваше имя" required>
-        </p>
-        <p class="write-us__field-group">
-          <label class="field-label  write-us__field-label" for="user-email">Ваша почта для ответа?</label>
-          <input class="input-field  write-us__input-field" id="user-email" name="user-email" type="email"
-                 placeholder="Ваша почта для ответа?" aria-label="Введите адрес электронной почты для ответа" required>
-        </p>
-        <p class="write-us__field-group">
-          <label class="field-label  write-us__field-label" for="user-message">Напишите что-нибудь...</label>
-          <textarea class="input-field  write-us__user-message" id="user-message" name="user-message"
-                    placeholder="Напишите что-нибудь..." aria-label="Введите ваше сообщение" rows="4" cols="40" required></textarea>
-        </p>
-        <button class="btn  write-us__btn" type="submit" aria-label="Отправить сообщение">Отправить</button>
-      </form>
+    <div class="overlay  hidden">
+      <div class="write-us">
+        <button class="write-us__close-btn"><span class="screen-readers-only">Закрыть окно</span></button>
+        <p class="write-us__heading">Мы обязательно вам ответим!</p>
+        <form class="write-us__form" action="#" method="post" aria-label="Форма обратной связи">
+          <div class="write-us__field-group">
+            <label class="field-label  write-us__field-label" for="user-name">Как вас зовут?</label>
+            <input class="input-field  write-us__input-field" id="user-name" name="user-email" type="text"
+                   placeholder="Как вас зовут?" aria-label="Введите ваше имя" required>
+          </div>
+          <div class="write-us__field-group">
+            <label class="field-label  write-us__field-label" for="user-email">Ваша почта для ответа?</label>
+            <input class="input-field  write-us__input-field" id="user-email" name="user-email" type="email"
+                   placeholder="Ваша почта для ответа?" aria-label="Введите адрес электронной почты для ответа" required>
+          </div>
+          <div class="write-us__field-group">
+            <label class="field-label  write-us__field-label" for="user-message">Напишите что-нибудь...</label>
+            <textarea class="input-field  write-us__user-message" id="user-message" name="user-message"
+                      placeholder="Напишите что-нибудь..." aria-label="Введите ваше сообщение" rows="4" cols="40" required></textarea>
+          </div>
+          <div class="write-us__btn-wrapper">
+            <button class="btn  write-us__btn" type="submit" aria-label="Отправить сообщение">Отправить</button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
   </body>
