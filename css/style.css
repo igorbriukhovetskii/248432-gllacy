@@ -1361,7 +1361,7 @@ img {
 .product-filters__filter-wrapper {
   display: flex;
   align-items: center;
-  padding: 0.5em 14px 0.60em;
+  padding: 0.55em 13px 0.55em 15px;
 
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 1.5em;
@@ -1569,6 +1569,7 @@ img {
 .product-filters__sort-by-fat {
   margin: 0;
   padding: 0;
+  min-width: 415px;
 
   border: none;
 }
@@ -1634,6 +1635,7 @@ img {
   margin: 0;
   margin-right: 14px;
   padding: 0;
+  min-width: 702px;
 
   border: none;
 }
