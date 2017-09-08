@@ -1175,7 +1175,7 @@ img {
   align-self: flex-start;
   width: 48.8%;
   min-height: 220px;
-  padding-right: 13%;
+  padding-right: 19px;
   padding-left: 19px;
 
   background: #ffffff url("../img/backgrounds/bg-post.jpg") -27px -35px no-repeat;
@@ -1194,6 +1194,8 @@ img {
 .post__link {
   position: relative;
 
+  display: block;
+  max-width: 290px;
   margin-top: 0;
 
   font-weight: 700;
@@ -1294,6 +1296,7 @@ img {
 }
 
 .contacts__description {
+  max-width: 175px;
   margin: 0;
 
   font-size: 14px;
@@ -1313,6 +1316,7 @@ img {
 }
 
 .contacts__phone {
+  max-width: 160px;
   margin-top: 5px;
   margin-bottom: 23px;
 
@@ -1567,9 +1571,9 @@ img {
 
 /*Фильтр каталога --> Фильтр мороженого по жирности*/
 .product-filters__sort-by-fat {
+  min-width: 415px;
   margin: 0;
   padding: 0;
-  min-width: 415px;
 
   border: none;
 }
@@ -1632,10 +1636,10 @@ img {
 
 /*Фильтр каталога --> Фильтр мороженого по наполнителю*/
 .product-filters__sort-by-filler {
+  min-width: 702px;
   margin: 0;
   margin-right: 14px;
   padding: 0;
-  min-width: 702px;
 
   border: none;
 }
