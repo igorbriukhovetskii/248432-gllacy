@@ -65,7 +65,10 @@ img {
   padding: 0.55em 0.8em;
 
   font-family: inherit;
-  color: #999999;
+  color: #323232;
+  font-weight:700;
+  font-size: 16px;
+  line-height: 24px;
 
   border: 1px solid rgba(178, 178, 178, 0.52);
   border-radius: 5px;
@@ -559,10 +562,6 @@ img {
 .site-search__input-field {
   width: 311px;
   height: 44px;
-
-  font-size: 16px;
-  line-height: 24px;
-  font-family: inherit;
 }
 
 .site-search__field-label {
@@ -638,9 +637,6 @@ img {
   width: 241px;
   height: 44px;
   margin-bottom: 20px;
-
-  font-size: 16px;
-  line-height: 24px;
 }
 
 .authorization-form__field-label {
@@ -779,7 +775,7 @@ img {
 
   vertical-align: top;
 
-  background: transparent url(../img/icons-sprite.svg) 35.2% 37.4% no-repeat;
+  background: transparent url(../img/icons-sprite.svg) 21.59% 96.1% no-repeat;
   border: none;
   cursor: pointer;
 }
@@ -1414,10 +1410,6 @@ img {
 .subscription__input-field {
   width: 100%;
   height: 44px;
-
-  font-size: 16px;
-  line-height: 24px;
-  color: #999999;
 }
 
 .subscription__btn {
