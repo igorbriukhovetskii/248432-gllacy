@@ -1046,12 +1046,12 @@ img {
 }
 
 .special-offers__offer--raspberries {
-  background: url("../img/backgrounds/bg-special-offer-1.jpg");
+  background: #641020 url("../img/backgrounds/bg-special-offer-1.jpg");
   background-size: cover;
 }
 
 .special-offers__offer--chocolates {
-  background-image: url("../img/backgrounds/bg-special-offer-2.jpg");
+  background: #40271c url("../img/backgrounds/bg-special-offer-2.jpg");
   background-size: cover;
 }
 
@@ -2129,7 +2129,7 @@ img {
 /*Всплывающее окно формы обратной связи*/
 .write-us {
   position: absolute;
-  top: 338px;
+  top: 50%;
   left: 50%;
 
   display: none;
@@ -2138,8 +2138,8 @@ img {
 
   background-color: #f8f7f4;
   border-radius: 10px 9px 9px 10px;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .write-us__heading {
@@ -2218,25 +2218,25 @@ img {
 
 @-webkit-keyframes grow {
   0% {
-    -webkit-transform: scale(0.01) translateX(-50%);
-    transform: scale(0.01) translateX(-50%);
+    -webkit-transform: scale(0.01) translate(-50%, -50%);
+    transform: scale(0.01) translate(-50%, -50%);
   }
 
   100% {
-    -webkit-transform: scale(1) translateX(-50%);
-    transform: scale(1) translateX(-50%);
+    -webkit-transform: scale(1) translate(-50%, -50%);
+    transform: scale(1) translate(-50%, -50%);
   }
 }
 
 @keyframes grow {
   0% {
-    -webkit-transform: scale(0.01) translateX(-50%);
-    transform: scale(0.01) translateX(-50%);
+    -webkit-transform: scale(0.01) translate(-50%, -50%);
+    transform: scale(0.01) translate(-50%, -50%);
   }
 
   100% {
-    -webkit-transform: scale(1) translateX(-50%);
-    transform: scale(1) translateX(-50%);
+    -webkit-transform: scale(1) translate(-50%, -50%);
+    transform: scale(1) translate(-50%, -50%);
   }
 }
 
@@ -2253,8 +2253,8 @@ img {
   60%,
   80%,
   100% {
-    -webkit-transform: translateX(-51%);
-    transform: translateX(-51%);
+    -webkit-transform: translate(-51%, -50%);
+    transform: translate(-51%, -50%);
   }
 
   10%,
@@ -2262,8 +2262,8 @@ img {
   50%,
   70%,
   90% {
-    -webkit-transform: translateX(-49%);
-    transform: translateX(-49%);
+    -webkit-transform: translate(-49%, -50%);
+    transform: translate(-49%, -50%);
   }
 }
 
@@ -2274,8 +2274,8 @@ img {
   60%,
   80%,
   100% {
-    -webkit-transform: translateX(-51%);
-    transform: translateX(-51%);
+    -webkit-transform: translate(-51%, -50%);
+    transform: translate(-51%, -50%);
   }
 
   10%,
@@ -2283,8 +2283,8 @@ img {
   50%,
   70%,
   90% {
-    -webkit-transform: translateX(-49%);
-    transform: translateX(-49%);
+    -webkit-transform: translate(-49%, -50%);
+    transform: translate(-49%, -50%);
   }
 }
 
